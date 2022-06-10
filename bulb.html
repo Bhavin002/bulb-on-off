@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb - on-off</title>
+    <style>
+        img{
+            margin-left: 16rem;
+        }
+
+        button {
+            margin-left: 26rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: black;
+            color: white;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://cdn5.vectorstock.com/i/1000x1000/70/44/3d-realistic-off-light-bulb-icon-closeup-vector-27407044.jpg"
+        height="400px" width="400px" id="bulb1" alt="pthoto"><br>
+    <img src="https://cdn4.vectorstock.com/i/1000x1000/48/08/realistic-glowing-light-bulb-on-dark-background-vector-3374808.jpg" height="400px" width="400px" alt="" id="bulb2" style="display: none;">
+    <button id="btn" class="cla">Bulb on</button>
+    <button style="display: none;" id="btn1">Bulb off</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $("#bulb1").css("display","none");
+                $("#bulb2").css("display","block");
+                $("#btn").css("display","none");
+                $("#btn1").css("display","block");
+            })
+        })
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $("#bulb1").css("display","block");
+                $("#bulb2").css("display","none");
+                $("#btn").css("display","block");
+                $("#btn1").css("display","none");
+            })
+        })
+    </script>
+</body>
+
+</html>
